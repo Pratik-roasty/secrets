@@ -7,7 +7,7 @@ const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
 const encrypt=require("mongoose-encryption");
 
-mongoose.connect("mongodb+srv://pratikroczkzz:letsgo@cluster0.oasxg.mongodb.net/UserDB?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URI);
 
 const userSchema=new mongoose.Schema({
   email: String,
